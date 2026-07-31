@@ -10,9 +10,9 @@
   <description>Governed AI SDK for Octoryn Router</description>
   <url>https://octoryn.dev</url>
   <scm>
-    <connection>scm:git:https://github.com/octopusos/octoryn-java.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/octopusos/octoryn-java.git</developerConnection>
-    <url>https://github.com/octopusos/octoryn-java</url>
+    <connection>scm:git:https://github.com/octoryn/octoryn-java.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/octoryn/octoryn-java.git</developerConnection>
+    <url>https://github.com/octoryn/octoryn-java</url>
   </scm>
   <developers>
     <developer>
