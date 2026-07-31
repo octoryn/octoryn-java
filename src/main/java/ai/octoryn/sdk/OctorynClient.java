@@ -113,8 +113,8 @@ public final class OctorynClient {
                 .header("Authorization", "Bearer " + apiKey)
                 .header("Content-Type", "application/json")
                 .header("Accept", accept)
-                .header("User-Agent", "octoryn-java/0.1.0")
-                .header("X-Octoryn-Sdk", "java/0.1.0")
+                .header("User-Agent", "octoryn-java/0.1.1")
+                .header("X-Octoryn-Sdk", "java/0.1.1")
                 .POST(HttpRequest.BodyPublishers.ofString(mapper.writeValueAsString(payload)))
                 .build();
         } catch (IOException error) {
