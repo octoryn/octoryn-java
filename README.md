@@ -2,18 +2,14 @@
 
 Governed model access for Java 17 and later.
 
-Until the `ai.octoryn` namespace is available from Maven Central, install the
-public release artifact into the caller's local Maven repository:
+Install the signed release from Maven Central:
 
-```bash
-curl -fLO \
-  https://github.com/octopusos/octoryn-java/releases/download/v0.1.1/octoryn-java-0.1.1.jar
-mvn install:install-file \
-  -Dfile=octoryn-java-0.1.1.jar \
-  -DgroupId=ai.octoryn \
-  -DartifactId=octoryn-java \
-  -Dversion=0.1.1 \
-  -Dpackaging=jar
+```xml
+<dependency>
+  <groupId>ai.octoryn</groupId>
+  <artifactId>octoryn-java</artifactId>
+  <version>0.1.1</version>
+</dependency>
 ```
 
 ```java
