@@ -25,6 +25,7 @@ final class OctorynClientTest {
     @Test
     void generatesTextToolsAndGovernance() throws Exception {
         try (var server = server(exchange -> {
+            assertEquals("/v1/chat/completions", exchange.getRequestURI().getPath());
             assertEquals("Bearer test-key", exchange.getRequestHeaders()
                 .getFirst("Authorization"));
             exchange.getResponseHeaders().add("Content-Type", "application/json");
@@ -217,7 +218,9 @@ final class OctorynClientTest {
     }
 
     private static String fixture(String name) throws IOException {
-        return Files.readString(Path.of("..", "sdk-conformance", "v1", name));
+        var monorepoPath = Path.of("..", "sdk-conformance", "v1", name);
+        var mirrorPath = Path.of("sdk-conformance", "v1", name);
+        return Files.readString(Files.exists(monorepoPath) ? monorepoPath : mirrorPath);
     }
 
     private static TestServer server(Handler handler) throws IOException {

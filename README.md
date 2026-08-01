@@ -15,7 +15,7 @@ Install the signed release from Maven Central:
 ```java
 var client = new OctorynClient(System.getenv("OCTORYN_API_KEY"));
 var result = client.generateText(
-    GenerateTextRequest.builder("policy/au-enterprise")
+    GenerateTextRequest.builder("openai/gpt-4.1-mini")
         .prompt("Explain this routing decision.")
         .build());
 
